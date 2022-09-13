@@ -1,0 +1,90 @@
+$PrimeColor: #ad1a10;
+.Container{
+    color: $PrimeColor;
+    border: 1px solid red;
+    width: 100vw;
+    // position: absolute;
+
+
+    .Testimonal{
+      
+        width: 90vw;
+
+
+        .single-Testi{
+          
+         
+            background-color: dimgrey;
+            margin: 0 auto;
+            color: white;
+            // height: 340px;
+
+
+
+        .Image-Content{
+            position: relative;
+            // border: 10px solid green;
+            // height: 100px;
+            // height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // height: 120px;
+       
+        
+
+
+            .Overlay{
+                background-color:rgb(46, 33, 33) ;
+                width: 100%;
+                // height: fit-content;
+                height: 100%;
+                position: absolute;
+            }
+            .Image-Card{
+                border: 10px;
+                // width: 50%;
+                z-index: 5;
+               
+            width: 50%;
+            height: 30%;
+         
+            }
+        }
+
+        img{
+           
+            width: 120px;
+            // height: 30%;
+            // height: 120px;
+            height: 120px;
+            object-fit: cover;
+            object-position: center ;
+            // height: 100%;
+            border-radius:33% ;
+            // margin: 0;
+        }
+
+        }
+
+    .Card-Content{
+        position: relative;
+
+
+
+        button{
+            // width: ;
+            padding: 17px 14px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 33px;
+            background-color: #ad1a10;
+            cursor: pointer;
+            // back
+        }
+    }
+
+
+    }
+    
+}

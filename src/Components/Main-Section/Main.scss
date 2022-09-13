@@ -1,0 +1,43 @@
+.Main-Container{
+
+    position: relative;
+    width: 100%;
+    // height: ;
+    // background-color: black;
+
+//    height: fit-content;
+
+
+  
+    .Content{
+        z-index: 5;
+        
+        opacity: 1.2 rem;
+        position: absolute;
+      
+        width:100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        flex-direction: column;
+
+        p{
+            font-size: 1.5rem;
+            margin: 0;
+          color: white;
+        }
+    }
+
+    video{
+        opacity: 0.888;
+       
+        width: 100vw;
+        height: 70vh;
+        object-fit: cover;
+        object-position: 20% ;
+        margin: 0;
+        padding: 0;
+    }
+}

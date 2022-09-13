@@ -18,6 +18,22 @@
         }
      }
 
+     &.main{
+        font-weight: 700;
+        border-radius: 12px;
+        font-size: 1.4rem;
+        width: 160px;
+        padding: 10px 30px;
+        background-color: #ad1a10;
+     
+
+        &:hover{
+            background-color: purple;
+            color: #4673bd;
+        }
+
+     }
+
      &.black{
         background-color:orange ;
         color: white;
