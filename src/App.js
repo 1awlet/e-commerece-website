@@ -4,15 +4,21 @@ import './App.css';
 import { ReactDOM } from 'react';
 import Home from './Components/Home/Home-Component';
 import {Routes, Route} from 'react-router-dom';
+import Nav from './Routes/Nav';
 function App() {
   return (
     <div className="App">
 
     <Routes>
-      <Route path='/' element={<Home />}></Route>
+      <Route path='/' element={<Nav />}>
+     
+     
+      <Route index element={<Home />}></Route>
+      </Route>
+      
     </Routes>
 
-      hi
+    
   
     </div>
   );

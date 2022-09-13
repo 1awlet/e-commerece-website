@@ -1,0 +1,30 @@
+
+
+.btns{
+    font-size: 1.2rem;
+    width: 120px;
+     padding: 6px 10px;
+     border: none;
+     cursor: pointer;
+    border-radius: 10px;
+
+
+     &.blue{
+        background-color: #4673bd;
+        color: white;
+    
+        &:hover{
+            background-color: blue;
+        }
+     }
+
+     &.black{
+        background-color:orange ;
+        color: white;
+
+        &:hover{
+            background-color: orangered;
+            color: black;
+        }
+     }
+}

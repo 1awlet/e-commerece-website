@@ -1,0 +1,74 @@
+@mixin flex ($flexdirection, $justify){
+    display: flex;
+    flex-direction:$flexdirection ;
+    justify-content: $justify;
+    
+}
+
+.Nav-contianer{
+    position: relative;
+    max-height: 50px;
+    width: 100%;
+    // border: 1px solid green;
+    @include flex(row, space-between);
+    align-items: center;
+    background-color:black;
+   
+
+    .logo{
+
+        // border: 1px solid red;
+        // max-height: 300px;
+        display: flex;
+        column-gap: 5px;
+        align-items: center;
+       
+       
+        .logo-img{
+            height: 2.2em;
+            // height: 40px;
+            width: 50px;
+            // z-index: 10;
+          
+
+        }
+
+        
+
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+
+    .Nav-links{
+   
+        display: flex;
+        align-items: center;
+        margin-right: 1em;
+        column-gap: 7px;
+
+        font-size: 1.2rem;
+        .btn{
+            display: flex;
+            column-gap: 7px;
+            height: 100%;
+      
+        }
+
+       
+        .content-link{
+            display: flex;
+            column-gap: 35px;
+            margin-right: 1em;
+        }
+       
+    }
+    
+
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+}
