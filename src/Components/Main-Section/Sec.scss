@@ -1,7 +1,7 @@
 $PrimeColor: #ad1a10;
 .Container{
     color: $PrimeColor;
-    border: 1px solid red;
+   
     width: 100vw;
     // position: absolute;
 
@@ -9,16 +9,19 @@ $PrimeColor: #ad1a10;
     .Testimonal{
       
         width: 90vw;
-
+        // border: 1px solid red;
+        height: fit-content;
+        // padding: 0 50px;
 
         .single-Testi{
           
-         
+  
             background-color: dimgrey;
             margin: 0 auto;
             color: white;
-            // height: 340px;
-
+            height: 100%;
+          
+         
 
 
         .Image-Content{
@@ -46,7 +49,7 @@ $PrimeColor: #ad1a10;
                 // width: 50%;
                 z-index: 5;
                
-            width: 50%;
+            width: 70%;
             height: 30%;
          
             }
@@ -54,7 +57,8 @@ $PrimeColor: #ad1a10;
 
         img{
            
-            width: 120px;
+            width: 100%;
+            max-width: 120px;
             // height: 30%;
             // height: 120px;
             height: 120px;
@@ -68,23 +72,56 @@ $PrimeColor: #ad1a10;
         }
 
     .Card-Content{
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-break: break-all;
+        padding: 0 13px;
+        // border: 1px solid blue;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 15px;
+      
+      
+    
 
 
 
-        button{
-            // width: ;
-            padding: 17px 14px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 33px;
-            background-color: #ad1a10;
-            cursor: pointer;
-            // back
-        }
+  
     }
+
 
 
     }
     
+}
+
+
+
+.btn-sec{  
+    position: absolute;
+    margin-top: 4px;
+    bottom: 5%;
+    width: 90%;
+    overflow: hidden;
+
+
+    button{
+      
+        padding: 17px 14px;
+        font-size: 1.1rem;
+        width: 60%;
+
+        
+       
+        border-radius: 5%;
+        color: white;
+        background-color: #ad1a10;
+        cursor: pointer;
+        border: none;
+
+        &:hover{
+            transform: scale(1.0400);
+            overflow: hidden;
+        }
+    }
 }
