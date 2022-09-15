@@ -5,6 +5,7 @@ import Button from '../Components/Buttons/Button-component';
 import {ReactComponent as Logo} from '../Assets/hexagon.svg';
 import './Nav.scss';
 import Maa from '../Assets/M.jpg';
+
 let Nav = ()=>{
 
     return(
