@@ -1,0 +1,75 @@
+
+
+@mixin shrink {
+    // left: -1px;
+    color: white;
+    top: -18px;
+    background-color: #121212;
+   
+    
+}
+.input-container{
+    // border: 1px solid red;
+ 
+    text-align: center;
+  color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.6em;
+   
+
+    .inputfields{
+        position: relative;
+        height: 55px;
+        border: 1px solid black;
+        width: fit-content;
+
+    }
+   
+    label{
+        position: absolute;
+        color: white;
+    //    background-color: black;
+   pointer-events: none;
+      
+     left: 8px;
+     top: 10px;
+     font-size: 1.3rem;
+     
+    }
+
+    input{
+        background-color: #121212;
+        border: none;
+        color: white;
+       width: 200px;
+     
+   
+     height: 100%;
+        
+        &::placeholder{
+            opacity: 0;
+         
+            
+        }
+    
+    
+    &:not(:placeholder-shown) + label{
+      @include shrink();
+    }
+    &:not(:placeholder-shown){
+        border: 1px solid white;
+    }
+
+    &:focus + label{
+        @include shrink();
+        
+    }
+
+    
+   
+    
+    }
+}
+

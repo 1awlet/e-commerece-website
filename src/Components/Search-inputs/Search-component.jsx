@@ -1,12 +1,16 @@
+import './search.scss';
 
-
-const Input = ({...attribute})=>{
+const Input = ({label,...attribute})=>{
 
     return(
 
-       <div>
-
+       <div className='input-container'>
+       
+      <div  className='inputfields'>
        <input  {...attribute}></input>
+       <label>{label}</label>
+
+       </div>
        </div>
     )
 }

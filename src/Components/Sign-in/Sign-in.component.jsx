@@ -1,7 +1,9 @@
 import Input from "../Search-inputs/Search-component";
 import {useState} from 'react';
 import Buttons from '../Buttons/Button-component';
-import {signINWithGoogle} from '../../Firebase/firebase';
+import {SingINWithGoogle, signInEmailAndPass, createUser} from '../../Firebase/firebase';
+import { async } from "@firebase/util";
+import './Sign-in.scss';
 let DefaultForm= {
     email:'',
     password:''
@@ -22,27 +24,47 @@ const SignIN = ()=>{
     let SubmitHandlar = (e)=>{
         e.preventDefault();
 
+        // e.stopPropagation();
+
     }
 
-let signINWithGoogle = async  ()=>{
+    const googleSingIN= async ()=>{
+        console.log('Hi')
+        let res = await SingINWithGoogle();
+        
+        createUser(res.user)
+      
+    }
 
-    let res = await signINWithGoogle();
+
+    const signInHandlar = async ()=>{
+
+        let res = await signInEmailAndPass(email, password);
+        console.log(res)
+    }
 
 
 
-}
+
 
 
     return(
-   <div>
+   <div className="signIn">
     <form onSubmit={SubmitHandlar}>
-    <Input type='email' required value={email} onChange={changeHandlar} name='email'></Input>
-    <Input type='password' required value={password} onChange={changeHandlar} name='password'></Input>
+        <h2>Have an account?</h2>
+        <h4>Sign in</h4>
+    <Input type='email' required value={email} onChange={changeHandlar} name='email' placeholder={'email'} label='Email'></Input>
+    <Input type='password' required value={password} onChange={changeHandlar} name='password' placeholder={'password'} label='Password'></Input>
 
-    <Buttons type='submit' style='blue' content={'Sign in'}></Buttons>
-
-    <Buttons type='button' style='blue' content={'Sign in with Google'} onClick={signINWithGoogle}></Buttons>
-          
+  
+    <div> 
+      <Buttons type='submit' style='blue' content={'Sign in'}  onClick={signInHandlar}></Buttons>
+    
+    <p>
+        Or
+    </p>
+    <Buttons  onClick={googleSingIN} content={'Sign in with Google'} style={'blue'} type='button'></Buttons>
+    </div> 
     </form>
     
    </div>
