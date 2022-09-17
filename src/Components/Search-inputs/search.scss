@@ -20,6 +20,7 @@
    
 
     .inputfields{
+    
         position: relative;
         height: 55px;
         border: 1px solid black;
@@ -30,8 +31,9 @@
     label{
         position: absolute;
         color: white;
-    //    background-color: black;
+       background-color: #121212;
    pointer-events: none;
+
       
      left: 8px;
      top: 10px;
@@ -40,11 +42,13 @@
     }
 
     input{
+        
         background-color: #121212;
-        border: none;
+      
         color: white;
        width: 200px;
-     
+       border: 1px solid white ;
+      border-radius: 10px;
    
      height: 100%;
         
@@ -53,10 +57,13 @@
          
             
         }
+
+
     
     
     &:not(:placeholder-shown) + label{
       @include shrink();
+      
     }
     &:not(:placeholder-shown){
         border: 1px solid white;
@@ -67,9 +74,16 @@
         
     }
 
+  
+
     
    
     
     }
 }
 
+
+input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0 1000px #121212 inset !important;
+  -webkit-text-fill-color: white !important;
+}
