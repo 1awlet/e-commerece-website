@@ -1,0 +1,55 @@
+.Cart-Container{
+    // border: 1px solid red;
+    // width: 100%;
+    position: relative ;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+
+    .Cart-logo{
+        position: relative;
+        // border: 1px solid yellow;
+        display: flex;
+    }
+
+    .Logos{
+        width: 45px;
+        position: relative;
+     
+       
+    }
+
+    .Count{
+        position: absolute;
+        color: purple;
+        // border: 1px solid red;
+        width: 100%;
+        margin: 1.6em auto 0 auto;
+        font-size: 1rem;
+     
+    }
+
+    .Menu{
+        // border: 1px solid green;
+       margin-left: 1em;
+        height: 45px;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+
+    @media (max-width:770px) {
+        // border: 1px solid blue;
+        // position: fixed;
+        
+        
+       
+    }
+
+
+}
+
+

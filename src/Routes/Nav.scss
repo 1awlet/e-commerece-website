@@ -12,7 +12,7 @@
     // border: 1px solid green;
     @include flex(row, space-between);
     align-items: center;
-    background-color:black;
+    // background-color:white;
    
 
     .logo{
@@ -55,15 +55,119 @@
       
         }
 
-       
+
+        .btns{
+            // border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 15px;
+        }
+
+        .Shop{
+            display: flex;
+            align-items: center;
+            border: 1px solid green;
+
+            .burger{
+               border: 1px solid red;
+                width: 40px;
+               height: 45px;
+               display: none;
+            }
+        }
+
+   
         .content-link{
+           
             display: flex;
             column-gap: 35px;
             margin-right: 1em;
+            // border: 1px solid green;
+          
+            align-items: center;
+
+           
+            h1{
+                margin: 0;
+                padding: 0;
+                font-size: 1.3rem;
+            }
         }
        
     }
     
+    @media (max-width:770px){
+
+        border: 1px solid red;
+        display: block;
+        
+    
+    
+         .Nav-links{
+           border: 1px solid yellow;
+             flex-direction: column;
+          align-items: flex-end;
+          position: absolute;
+          right: 0;
+          margin: 0;
+        height: 200px;
+    // justify-content: space-;
+        
+       
+      
+
+        
+    
+
+            .content-link{
+                border: 1px solid green;
+               flex-direction: column;
+               gap: 14px;
+               height: 50%;
+               width: 100%;
+               margin: 0;
+               justify-content: space-around;
+                // width: 100%;
+                // flex-direction: column;
+             
+            }
+
+
+            .btns{
+                // width: 100%;
+                border: 1px solid green;
+               flex-direction: column;
+               justify-content: space-around;
+               height: 50%;
+               gap: 14px;
+             
+            }
+
+
+            .Shop{
+            
+                position: absolute;
+               top: -33%;
+                right: 0;
+                align-items: center;
+                border: 1px solid red;
+                display: flex;
+                // display: none;
+
+
+                .burger{
+                    display: flex;
+                }
+            }
+
+        }
+
+        
+
+      
+
+    }
 
 
     a{
