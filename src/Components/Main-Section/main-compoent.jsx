@@ -14,7 +14,7 @@ const Show = ()=>{
     </Link>   
      <p> Explore the latest technologies</p>
       </div>
-          <video className="Vids" src={Vids} autoPlay muted   loop />
+          <video className="Vids" src={Vids} autoPlay muted loop  playsinline="true" disablePictureInPicture="true"  />
         </div>
     )
 }
