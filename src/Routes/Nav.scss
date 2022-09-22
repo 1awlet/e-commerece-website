@@ -67,13 +67,14 @@
         .Shop{
             display: flex;
             align-items: center;
-            border: 1px solid green;
-
+            
+          
             .burger{
-               border: 1px solid red;
+            
                 width: 40px;
                height: 45px;
-               display: none;
+                display: none;
+               cursor: pointer;
             }
         }
 
@@ -99,29 +100,27 @@
     
     @media (max-width:770px){
 
-        border: 1px solid red;
+
         display: block;
         
     
+       
     
          .Nav-links{
-           border: 1px solid yellow;
+            z-index: 10;
+           
+            background-color: black;
+         
              flex-direction: column;
           align-items: flex-end;
           position: absolute;
+          top: 100%;
           right: 0;
           margin: 0;
         height: 200px;
     // justify-content: space-;
-        
-       
-      
-
-        
-    
-
             .content-link{
-                border: 1px solid green;
+           
                flex-direction: column;
                gap: 14px;
                height: 50%;
@@ -133,10 +132,13 @@
              
             }
 
+            .toggle{
+                display: none;
+            }
 
             .btns{
                 // width: 100%;
-                border: 1px solid green;
+          
                flex-direction: column;
                justify-content: space-around;
                height: 50%;
@@ -146,20 +148,35 @@
 
 
             .Shop{
-            
-                position: absolute;
-               top: -33%;
-                right: 0;
-                align-items: center;
                 border: 1px solid red;
+                position: absolute;
+                 top: -25%;
+                right: 0;
                 display: flex;
-                // display: none;
+                align-items: center;
+             
+               
+            
+                justify-content: center;
 
 
                 .burger{
                     display: flex;
+                    
                 }
+
+
+                
             }
+
+
+          
+
+            
+
+            
+
+           
 
         }
 

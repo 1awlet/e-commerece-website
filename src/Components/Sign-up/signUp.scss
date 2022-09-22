@@ -2,7 +2,8 @@
 .signUp-Container{
     margin: 0 auto;
  
-   width: 90%;
+    width: 90%;
+    border: 1px solid green;
     color: white;
     background-color: #121212;
     
@@ -15,8 +16,8 @@
         margin-bottom: 5px;
     }
 
-    .signUp-content{
-        width: 50%;
+  
+      
 
      
 
@@ -28,26 +29,33 @@
             margin-bottom: 15px;
         }
 
-
+    .signUp-content{
+        width: 50%;
+    }
 
     
     .Avatar-con{
         width: 50%;
         margin: 0 auto;
-      
-
+     
+     
         .Avatar{
-            width: 100%;
-            height: 100%;
+            width: 50%;
             max-width: 130px;
+            height: fit-content;
+            border: 1px solid green;
+              
         }
+
+        
     }
 
+    
     
 
 
 
-    }
+    
     
     .signUp-card{
         width: 50%;
@@ -60,6 +68,21 @@
         width: 100%;
         height: 100%;
     }
+
+    }
+
+
+
+    @media(max-width: 780px){
+        .signUp-card{
+            display: none;
+
+        }
+
+        .signUp-content{
+            width: 100%;
+        }
+
 
     }
 }
