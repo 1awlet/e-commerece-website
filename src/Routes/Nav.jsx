@@ -8,8 +8,31 @@ import  ShopLogo from './Assets/Shop.png';
 import ShopCart from '../Components/Cart-Shop/Cart-Component';
 import Maa from '../Assets/M.jpg';
 import {ReactComponent as Menu} from './Assets/Menu.svg';
+import {ReactComponent as Xmark} from './Assets/Xmark.svg';
+import {useRef, useState} from 'react';
+
 
 let Nav = ()=>{
+    const [isBurgerOn, setBurgerOn] = useState(true);
+    const ContentRef = useRef();
+    const ShopRef = useRef();
+
+  
+  
+
+let hideNav = ()=>{
+    ContentRef.current.classList.toggle('toggle'); 
+    ShopRef.current.classList.toggle('toggle');
+    setBurgerOn(!isBurgerOn);
+}
+let ShowBurger = ()=>{
+  setBurgerOn(!isBurgerOn);
+  ContentRef.current.classList.toggle('toggle'); 
+  ShopRef.current.classList.toggle('toggle');
+}
+
+   
+
 
     return(
      <Fragment>
@@ -29,12 +52,12 @@ let Nav = ()=>{
            
            </div> 
 
-         <div   className="Nav-links">
+         <div   className="Nav-links ">
 
 
-            <div className="content-link">
-            <Link to={'catagories'}>  <h1>Catagories</h1></Link>
-            <Link to={'catagories'}><h1> About </h1></Link>
+            <div  ref={ContentRef} className="content-link  toggle"  >
+            <Link to={'catagories'} onClick={hideNav}>  Catagories</Link>
+            <Link to={'catagories'} onClick={hideNav}>About </Link>
             {/* <Img src={ShopLogo}></Img>  */}
             {/* <img src={ShopLogo} className='Logo'></img> */}
            
@@ -42,16 +65,27 @@ let Nav = ()=>{
           
         
             </div>
-            <div className="Shop">
+            <div className="Shop toggle" >
             <ShopCart ></ShopCart>
-            <Menu className='burger'></Menu>
+            { isBurgerOn ? (
+
+      <Menu className='burger'  onClick={hideNav}></Menu>
+
+            ):
+            (
+              <Xmark className='burger Xmark'  onClick={ShowBurger}></Xmark>
+
+            )
+
+            }
+          
             </div>
-            <div  className="btns">
+            <div ref={ShopRef}   className="btns toggle">
 
            
-           <Link to={'Sign-in'}><Button style={'blue'} content={'Sign in'}></Button>
+           <Link to={'Sign-in'}><Button style={'blue'} content={'Sign in'} onClick={hideNav}></Button>
            </Link> 
-          <Link to={'Sign-up'}>  <Button style={'black'} content={'Sign up'}></Button>
+          <Link to={'Sign-up'}>  <Button style={'black'} content={'Sign up'} onClick={hideNav}></Button>
 
           </Link> 
           </div>
