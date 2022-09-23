@@ -1,4 +1,4 @@
-import Vids from './Asset/video.mp4';
+import Vids from './Asset/Background.webm';
 import './Main.scss';
 import Buttons from '../Buttons/Button-component';
 import {Link} from 'react-router-dom';
@@ -14,7 +14,7 @@ const Show = ()=>{
     </Link>   
      <p> Explore the latest technologies</p>
       </div>
-          <video className="Vids" src={Vids} autoPlay muted loop  playsinline="true" disablePictureInPicture="true"  />
+          <video className="Vids" src={Vids} autoPlay muted loop  playsInline={true} disablePictureInPicture={true}  />
         </div>
     )
 }
