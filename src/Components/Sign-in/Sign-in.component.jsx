@@ -14,6 +14,7 @@ let DefaultForm= {
 
 const SignIN = ()=>{
     const [form, setForm] = useState(DefaultForm);
+    const [errorMessage, setErrorMessage] = useState();
 
     let {email, password}= form;
 
@@ -37,12 +38,23 @@ const SignIN = ()=>{
         createUser(res.user)
       
     }
+    
+   
 
 
     const signInHandlar = async ()=>{
 
+      try {
         let res = await signInEmailAndPass(email, password);
-        console.log(res)
+        
+      } catch (error) {
+        
+
+      setErrorMessage(error.message)
+        
+       
+      }  
+        // console.log(res)
     }
 
 
@@ -52,15 +64,18 @@ const SignIN = ()=>{
 
     return(
    <div className="signIn">
-  
+   
   <div  className="signIN-Conent">
     <div    className="Avatar-con">
          <Avatar className='Avatar'></Avatar>
          </div>
+ 
     <form onSubmit={SubmitHandlar}>
-        
+    <span className={errorMessage ? 'error-handlars' : ''}>{errorMessage}</span>
         <h2>Have an account?</h2>
         <h4>Sign in</h4>
+
+       
     <Input type='email' required value={email} onChange={changeHandlar} name='email' placeholder={'email'} label='Email'></Input>
     <Input type='password' required value={password} onChange={changeHandlar} name='password' placeholder={'password'} label='Password'></Input>
 

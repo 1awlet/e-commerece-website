@@ -18,6 +18,7 @@ let defaultForm = {
 
 const SignUp = ()=>{
     let [form, setform] = useState(defaultForm);
+    let [errorMessage, setErrorMessage] = useState();
 
     let {username, email, password, comfirmPassword}= form;
 
@@ -39,15 +40,22 @@ let submitHandlare = (e)=>{
     let signUpHandlar = async ()=>{
     
     if(password === comfirmPassword){
+      try {
         let {user} = await emailAndPassAuth(email, password);
         let displayName = username;
         createUser(user, {displayName});
         setform(defaultForm);
+
+      } catch (error) {
+
+        setErrorMessage(error.message);
+        
+      } 
     
 
 
     }else{
-        console.log('Wrong input')
+        setErrorMessage('Password doesnt match');
     }
      
     }
@@ -64,6 +72,7 @@ let submitHandlare = (e)=>{
 
         </div>
              <form onSubmit={submitHandlare}> 
+    <span className={errorMessage ? 'error-handlars' : ''}>{errorMessage}</span>
         <h2>Don't have an account?</h2>
         <h4>Sign up</h4>
         <Input type='text' onChange={changeHandlar} name='username' value={username} required placeholder='.' label={'Username'}></Input>

@@ -57,7 +57,7 @@ let ShowBurger = ()=>{
 
             <div  ref={ContentRef} className="content-link  toggle"  >
             <Link to={'catagories'} onClick={hideNav}>  Catagories</Link>
-            <Link to={'catagories'} onClick={hideNav}>About </Link>
+            <Link to={'About'} onClick={hideNav}>About </Link>
             {/* <Img src={ShopLogo}></Img>  */}
             {/* <img src={ShopLogo} className='Logo'></img> */}
            
