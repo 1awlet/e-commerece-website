@@ -1,4 +1,4 @@
-import Vids from './Asset/Background.webm';
+import Vids from './Asset/Background.mp4';
 import './Main.scss';
 import Buttons from '../Buttons/Button-component';
 import {Link} from 'react-router-dom';
