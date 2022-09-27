@@ -1,4 +1,4 @@
-import Vids from './Asset/Background.mp4';
+import Vids from './Asset/bk.mp4';
 import './Main.scss';
 import Buttons from '../Buttons/Button-component';
 import {Link} from 'react-router-dom';
@@ -12,7 +12,7 @@ const Show = ()=>{
    <Link to={'catagories'}>
    <Buttons style={'main'} content={'Explore'}></Buttons>
     </Link>   
-     <p> Explore the latest technologies</p>
+     <p> Explore the latest technologiess</p>
       </div>
           <video className="Vids" src={Vids} autoPlay muted loop  playsInline={true} disablePictureInPicture={true}  />
         </div>
