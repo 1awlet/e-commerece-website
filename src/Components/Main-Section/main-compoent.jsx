@@ -12,7 +12,7 @@ const Show = ()=>{
    <Link to={'catagories'}>
    <Buttons style={'main'} content={'Explore'}></Buttons>
     </Link>   
-     <p> Explore the latest technologiess</p>
+     <p> Explore the latest technologies</p>
       </div>
           <video className="Vids" src={Vids} autoPlay muted loop  playsInline={true} disablePictureInPicture={true}  />
         </div>

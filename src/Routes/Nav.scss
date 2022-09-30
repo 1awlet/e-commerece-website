@@ -6,6 +6,7 @@
 }
 
 .Nav-contianer{
+
     position: relative;
     max-height: 50px;
     width: 100%;
@@ -103,19 +104,19 @@
 
         display: block;
         
-    
+       
 
        
     
          .Nav-links{
             z-index: 10;
-           
+         
             background-color: black;
          
              flex-direction: column;
           align-items: flex-end;
           position: absolute;
-        
+        // border: 1px solid red;
           top: 100%;
           right: 0;
           margin: 0;
@@ -128,6 +129,8 @@
                height: 50%;
                width: 100%;
                margin: 0;
+                
+             
                justify-content: space-around;
                 // width: 100%;
                 // flex-direction: column;
@@ -152,7 +155,8 @@
             .Shop{
              
                 position: absolute;
-                 top: -25%;
+                 top: -26%;
+                //  border: 1px solid green;
                 right: 0;
                 display: flex;
                 align-items: center;

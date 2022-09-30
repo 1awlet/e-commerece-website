@@ -8,6 +8,8 @@ body {
   /* background-color: #121212; */
   background-color: black;
 
+padding: 0;
+text-align: center; 
 }
 
 code {

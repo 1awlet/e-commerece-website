@@ -16,10 +16,6 @@ let Nav = ()=>{
     const [isBurgerOn, setBurgerOn] = useState(true);
     const ContentRef = useRef();
     const ShopRef = useRef();
-
-  
-  
-
 let hideNav = ()=>{
     ContentRef.current.classList.toggle('toggle'); 
     ShopRef.current.classList.toggle('toggle');
@@ -30,9 +26,6 @@ let ShowBurger = ()=>{
   ContentRef.current.classList.toggle('toggle'); 
   ShopRef.current.classList.toggle('toggle');
 }
-
-   
-
 
     return(
      <Fragment>
@@ -48,22 +41,15 @@ let ShowBurger = ()=>{
            </Link>
            <Link to={'/'}> <h1 >My Shop</h1>
              </Link>  
-        
-           
+
            </div> 
 
          <div   className="Nav-links ">
-
-
             <div  ref={ContentRef} className="content-link  toggle"  >
             <Link to={'catagories'} onClick={hideNav}>  Catagories</Link>
             <Link to={'About'} onClick={hideNav}>About </Link>
             {/* <Img src={ShopLogo}></Img>  */}
             {/* <img src={ShopLogo} className='Logo'></img> */}
-           
-
-          
-        
             </div>
             <div className="Shop toggle" >
             <ShopCart ></ShopCart>
@@ -91,15 +77,9 @@ let ShowBurger = ()=>{
           </div>
 
             </div>
-
-
-       
         
         </div>
         
-      
-
-
         <Outlet></Outlet>
 
         </Fragment>
