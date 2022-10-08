@@ -23,10 +23,12 @@ function App() {
       <Route index element={<Home />}></Route>
       <Route  path='Sign-in' element={<SignIN />}></Route>
       <Route  path='Sign-up' element={<SignUp />}></Route>
-      <Route  path='catagories' element={<Catagory />}>
-
-      <Route  path='Pc' element={<PC />}></Route>
+      <Route  path='catagories' element={<Catagory />}> 
+     
       </Route>
+      <Route  path='catagories/Pc' element={<PC />}> </Route>
+      
+    
 
 
       </Route>

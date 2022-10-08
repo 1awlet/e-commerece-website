@@ -1,0 +1,27 @@
+
+
+.dropDown-Container{
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    z-index: 6;
+    top: 100%;
+    right: 15em;
+    // padding: 5px;
+
+    .Cart-item{
+        overflow: scroll;
+        height: 300px;
+        width: 100%;
+      
+        // background-color: black;
+    }
+
+
+
+    @media (max-width:770px){
+        right: 0em;
+    }
+
+}

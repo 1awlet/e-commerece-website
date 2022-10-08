@@ -1,0 +1,53 @@
+[
+
+    {
+        "id": 1,
+        "Title": "Gaming Keyboard",
+        "ImageURL": "https://i.postimg.cc/8Pb3VsRm/gming.jpg",
+        "Price": "100$"
+    },
+
+    {
+        "id": 2,
+        "Title": "Gaming Pc",
+        "ImageURL": "https://i.postimg.cc/pdr9syvd/umm.jpg",
+        "Price": "1300$"
+    },
+    {
+        "id": 3,
+        "Title": "Full Set Up",    
+        "ImageURL": "https://i.postimg.cc/cCcGtCf0/fullset-UP.jpg",
+        "Price": "2300$"
+    },
+    {
+        "id": 4,
+        "Title": "Gaming Mouse",
+        "ImageURL": "https://i.postimg.cc/2Sk8GR50/ella-don-0tk-FBso-YM6-M-unsplash.jpg",
+        "Price": "80$"
+    },
+    {
+        "id": 5,
+        "Title": "Lenovo",
+        "ImageURL": "https://i.postimg.cc/CxDb6WpK/artin-bakhan-Sq-Ly-NHbs-LKQ-unsplash.jpg",
+        "Price": "1200$"
+    },
+    {
+        "id": 6,
+        "Title": "Dell",
+        "ImageURL": "https://i.postimg.cc/KvvtKV2y/new-Razer.jpg",
+        "Price": "700$"
+    },
+    {
+        "id": 7,
+        "Title": "Gaming Pc",
+        "ImageURL": "https://i.postimg.cc/Xq90Pf3m/istockphoto-1314343964-170667a.jpg",
+        "Price": "900$"
+    },
+    {
+        "id": 8,
+        "Title": "PC Monitor",
+        "ImageURL": "https://i.postimg.cc/wTVhKnWx/hero.jpg",
+        "Price": "300$"
+    }
+
+]

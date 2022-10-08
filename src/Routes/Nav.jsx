@@ -1,6 +1,6 @@
 import { Outlet,Link} from "react-router-dom";
 // import {  } from "react-router-dom";
-import { Fragment } from "react";
+import { Fragment, useContext } from "react";
 import Button from '../Components/Buttons/Button-component';
 import {ReactComponent as Logo} from '../Assets/hexagon.svg';
 import './Nav.scss';
@@ -10,7 +10,9 @@ import Maa from '../Assets/M.jpg';
 import {ReactComponent as Menu} from './Assets/Menu.svg';
 import {ReactComponent as Xmark} from './Assets/Xmark.svg';
 import {useRef, useState} from 'react';
+import { ItemContext } from "../Context/Item-context-component";
 
+import DropDown from '../Components/Cart-Drop-Down/Drop-Down';
 
 let Nav = ()=>{
     const [isBurgerOn, setBurgerOn] = useState(true);
@@ -27,6 +29,8 @@ let ShowBurger = ()=>{
   ShopRef.current.classList.toggle('toggle');
 }
 
+  
+let {isOpen} = useContext(ItemContext);
     return(
      <Fragment>
     
@@ -53,6 +57,7 @@ let ShowBurger = ()=>{
             </div>
             <div className="Shop toggle" >
             <ShopCart ></ShopCart>
+
             { isBurgerOn ? (
 
       <Menu className='burger'  onClick={hideNav}></Menu>
@@ -64,7 +69,6 @@ let ShowBurger = ()=>{
             )
 
             }
-          
             </div>
             <div ref={ShopRef}   className="btns toggle">
 
@@ -77,7 +81,10 @@ let ShowBurger = ()=>{
           </div>
 
             </div>
-        
+           {
+            isOpen &&<DropDown></DropDown>
+           } 
+  
         </div>
         
         <Outlet></Outlet>

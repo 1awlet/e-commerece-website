@@ -51,9 +51,10 @@ let Catagory = ()=>{
 
         <div    className='catagory-contianer'>  
        
-        
-
-       {
+     <div   className='Message'>
+       <h3 > Only Pc section avaible, working on others</h3>
+       </div> 
+       {    
         Data.map((item)=>(
             
           <Catagories key={item.id} item={item}></Catagories>
