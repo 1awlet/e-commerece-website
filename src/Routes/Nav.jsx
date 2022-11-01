@@ -11,9 +11,9 @@ import {ReactComponent as Menu} from './Assets/Menu.svg';
 import {ReactComponent as Xmark} from './Assets/Xmark.svg';
 import {useRef, useState} from 'react';
 import { ItemContext } from "../Context/Item-context-component";
-
+import {UserContext} from '../Context/User';
 import DropDown from '../Components/Cart-Drop-Down/Drop-Down';
-
+import {signoutbtn} from '../Firebase/firebase'
 let Nav = ()=>{
     const [isBurgerOn, setBurgerOn] = useState(true);
     const ContentRef = useRef();
@@ -29,6 +29,8 @@ let ShowBurger = ()=>{
   ShopRef.current.classList.toggle('toggle');
 }
 
+      let {currentUser} = useContext(UserContext);
+      console.log(currentUser)
   
 let {isOpen} = useContext(ItemContext);
     return(
@@ -72,12 +74,23 @@ let {isOpen} = useContext(ItemContext);
             </div>
             <div ref={ShopRef}   className="btns toggle">
 
-           
-           <Link to={'Sign-in'}><Button style={'blue'} content={'Sign in'} onClick={hideNav}></Button>
-           </Link> 
-          <Link to={'Sign-up'}>  <Button style={'black'} content={'Sign up'} onClick={hideNav}></Button>
+            {
+              currentUser? (
+                <Button style={'Signout'} content={'Sign out'} onClick={signoutbtn}></Button>
 
-          </Link> 
+              )
+              : 
+              (
+               <div className="btns ">
+                 <Link to={'Sign-in'}><Button style={'blue'} content={'Sign in'} onClick={hideNav}></Button>
+                </Link> 
+               <Link to={'Sign-up'}>  <Button style={'black'} content={'Sign up'} onClick={hideNav}></Button>
+               </Link> 
+               </div>
+              )
+            }
+           
+  
           </div>
 
             </div>

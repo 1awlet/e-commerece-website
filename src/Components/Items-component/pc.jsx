@@ -3,35 +3,37 @@ import './pc.scss';
 import {ProductConext} from '../../Context/Product.context';
 import {useContext} from 'react';
 
+import Data from '../../Data.json';
+import PcItem from '../Pc-Items/Pc-Items-component';
+
+
 let PC = ()=>
 {
      let {items} = useContext(ProductConext);
-   return(
+     
+
+
+
+  
+
+     return(
 
    <div    className='pcdiv'>
        
        {
-          items.map(({id, Title, ImageURL, Price})=>(
-             
-               <div key={id} className='Pc-items'>
-             
-               <img src={ImageURL}></img>
-
-         <button   className='btn-cart'>Add to cart</button>
+          items.map((product)=>{
             
-             <div   className='des'>
-                 <h3>{Title}</h3>
-               <h3>{Price}</h3>
-              
-                </div>
-
-      
-
-               </div>
-          ))
+     //    let {id, Title, ImageURL, Price} = product; 
+           
+        
+    return(    
+     <PcItem  key={product.id} Product={product}>
+     </PcItem>
+               );
+})
        }
     </div>
-     )
+     );
 }
 
 export default PC;

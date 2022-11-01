@@ -35,8 +35,19 @@
 
      }
 
-    
+     &.Signout{
+       
+        // padding: 5px;
+        height: 35px !important;
+        width: 50px;
 
+        background-color: #4673bd;
+        color: white;
+    
+        &:hover{
+            background-color: blue;
+        }
+     }
 
      &.black{
         background-color:orange ;

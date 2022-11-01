@@ -1,9 +1,12 @@
 import { initializeApp } from "firebase/app";
 import {signInWithPopup, getAuth, GoogleAuthProvider,
 signInWithEmailAndPassword,
-createUserWithEmailAndPassword
+createUserWithEmailAndPassword,
+onAuthStateChanged,
+signOut
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore} from 'firebase/firestore';
+import { useCallback } from 'react';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCcNEyeqS58NI0VFS8zAbLPnMG-Jrwn1J4",
@@ -80,3 +83,6 @@ console.log('Thanks for signing up')
 
 }
 
+export const AuthchangeListiner = (callback)=> onAuthStateChanged(auth,callback);
+
+export const signoutbtn = ()=> signOut(auth);

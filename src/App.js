@@ -9,20 +9,22 @@ import SignIN from './Components/Sign-in/Sign-in.component';
 import SignUp from './Components/Sign-up/Sign-up-component';
 import Catagory from './Components/Catagory/Catagory-Component';
 import PC from './Components/Items-component/pc'; 
+import {UserContext} from './Context/User';
+import {useContext} from 'react'
 
 function App() {
 
-
+  let { currentUser}= useContext(UserContext);
   return (
     <div className="App">
-
+    
     <Routes>
       <Route path='/' element={<Nav />}>
      
      
       <Route index element={<Home />}></Route>
-      <Route  path='Sign-in' element={<SignIN />}></Route>
-      <Route  path='Sign-up' element={<SignUp />}></Route>
+      <Route  path='Sign-in' element={currentUser ?<Home />: <SignIN />}></Route>
+      <Route  path='Sign-up' element={currentUser ?<Home />: <SignUp />}></Route>
       <Route  path='catagories' element={<Catagory />}> 
      
       </Route>
@@ -33,6 +35,7 @@ function App() {
 
       </Route>
       
+     
       
     </Routes>
 

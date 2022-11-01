@@ -7,21 +7,43 @@
     background-color: white;
     z-index: 6;
     top: 100%;
-    right: 15em;
+ 
+    color: black;
+
     // padding: 5px;
+
 
     .Cart-item{
         overflow: scroll;
         height: 300px;
         width: 100%;
-      
-        // background-color: black;
+        // z-index: 10;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+       gap: 14px;
+    
+    }
+
+    &.yes{
+        right: 5em;
+
+    }
+    &.no {
+        right: 15em;
     }
 
 
-
     @media (max-width:770px){
-        right: 0em;
+     
+        &.yes{
+            right: 0;
+    
+        }
+        &.no {
+            right: 0;
+        }
+
     }
 
 }

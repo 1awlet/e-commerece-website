@@ -5,18 +5,19 @@ import { ItemContext } from '../../Context/Item-context-component';
 
 const ShopCart = ()=>{
 
-    let {isOpen, setOpen} = useContext(ItemContext);
+    let {isOpen, setOpen, Count} = useContext(ItemContext);
 
 
     let showItem = ()=>{
         setOpen(!isOpen);
         console.log(isOpen)
+       
     }
     return(
         <div   className='Cart-Container' onClick={showItem}>
             <div    className='Cart-logo'>
          <img src={ShopLogo} className='Logos'></img>
-        <span   className='Count'>0</span>
+        <span   className='Count'>{Count}</span>
         </div>
        
       
